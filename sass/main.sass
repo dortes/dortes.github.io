@@ -1,0 +1,204 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+h1, h2, h3, h4, h5, h6
+	font-family: Teko
+	font-weight: Bold
+header
+	height: 100vh
+	width: 100%
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		opacity: 0.8
+
+
+	.menu-icon
+		position: absolute
+		left: 5%
+		cursor: pointer
+		top: 5%
+		padding: 10px 10px 20px 10px
+		.menu-icon-line
+			background-color: #fff
+			position: relative
+			display: block
+			width: 30px
+			height: 2px
+			
+			&:before
+				content: ''
+				background-color: #fff
+				position: relative
+				top: 10px
+				left: 0
+				display: block
+				width: 30px
+				height: 2px
+				transition: all 0.5s
+			&:after
+				content: ''
+				background-color: #fff
+				position: relative
+				top: 18px
+				display: block
+				width: 30px
+				height: 2px
+		.changed
+			&:before
+				left: 5px
+	.menu
+		position: absolute
+		left: 8%
+		top: 4.5%
+		display: none
+		ul
+			list-style: none
+			li
+				float: left
+				margin-right: 30px
+				a
+					color:#cecece
+					&:hover
+						text-decoration: none
+						color: #fff
+	.mid-head
+		position: absolute
+		color: #fff
+		top: 45%
+		left: 43%
+		animation-delay: 0.5s
+		animation-timing-function: ease-in-out
+		text-align: center
+		border-radius: 50%
+		z-index: 288
+		h1
+			text-transform: uppercase
+			font-size: 3.5em
+			line-height: 1px
+
+		span
+			color: #bcbcbc
+			margin-top: -220px
+			position: relative
+			top: -15px
+	.ellipse-container
+		position: relative
+		margin: 0 auto
+		width: 50rem
+		height: 50rem
+		top: 22rem
+		.ellipse
+			border-radius: 50%
+			position: absolute
+			top: 0
+			border-style: solid
+		.thin
+			width: 75%
+			height: 75%
+			border-width: 2px
+			border-color: #fff transparent
+			top: 6rem
+			left: 12%
+			transform: rotate(0)
+			animation: ellipseRotate2 10s ease-in-out infinite
+		.thick
+			width: 99.5%
+			height: 99.5%
+			border-color: #22c2fd transparent
+			border-width: 3px 
+			top: -0.3rem
+			transform: rotate(-45deg)
+			animation: ellipseRotate 8s ease infinite
+
+	.social-icons
+		position: absolute
+		right: 5%
+		top: 2%
+		li
+			float: left
+			list-style: none
+			font-size: 20px
+			margin-right: 20px
+			a
+				color: #bcbcbd
+				&:hover
+					color: #fff
+
+
+@keyframes ellipseRotate
+	0%
+		transform: rotate(-45deg)
+	100%
+		transform: rotate(-765deg)
+
+@keyframes ellipseRotate2
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(-900deg)
+@import "media" // Всегда в конце
