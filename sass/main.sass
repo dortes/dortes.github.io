@@ -1,204 +1,282 @@
+@import "vars"
 @import "fonts"
 @import "libs"
-@import "vars"
 
-*
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
+::placeholder
 	color: #666
 
-html, body
-	height: 100%
+::selection
+	background-color: $accent
+	color: #fff
 
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: "Inconsolata"
 	overflow-x: hidden
-	margin: 0
-	padding: 0
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+	&.img-width
+		width: 100%
 
 .text-center
 	text-align: center
 
-::selection
-	background-color: $accent
-	color: #fff
-
+b, strong
+	font-weight: bold
 
 h1, h2, h3, h4, h5, h6
-	font-family: Teko
-	font-weight: Bold
+	font-family: Poppins
+	
+.active-soc
+	left: 0!important
+
+
+#ball
+	width: 35px
+	height: 35px
+	background: none
+	border: 2px solid $accent
+	border-radius: 50%
+	position: absolute
+	left: 50%
+	top: 50%
+	margin: -10px 0 0 -10px
+	z-index: 999
+	opacity: 0.5
+	pointer-events: none
+	
 header
 	height: 100vh
-	width: 100%
-	&:before
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: #000
-		opacity: 0.8
-
-
-	.menu-icon
-		position: absolute
-		left: 5%
-		cursor: pointer
-		top: 5%
-		padding: 10px 10px 20px 10px
-		.menu-icon-line
-			background-color: #fff
-			position: relative
-			display: block
-			width: 30px
-			height: 2px
-			
-			&:before
-				content: ''
-				background-color: #fff
-				position: relative
-				top: 10px
-				left: 0
-				display: block
-				width: 30px
-				height: 2px
-				transition: all 0.5s
-			&:after
-				content: ''
-				background-color: #fff
-				position: relative
-				top: 18px
-				display: block
-				width: 30px
-				height: 2px
-		.changed
-			&:before
-				left: 5px
-	.menu
-		position: absolute
-		left: 8%
-		top: 4.5%
-		display: none
-		ul
-			list-style: none
-			li
-				float: left
-				margin-right: 30px
-				a
-					color:#cecece
-					&:hover
-						text-decoration: none
-						color: #fff
-	.mid-head
-		position: absolute
-		color: #fff
-		top: 45%
-		left: 43%
-		animation-delay: 0.5s
-		animation-timing-function: ease-in-out
-		text-align: center
-		border-radius: 50%
-		z-index: 288
-		h1
-			text-transform: uppercase
-			font-size: 3.5em
-			line-height: 1px
-
-		span
-			color: #bcbcbc
-			margin-top: -220px
-			position: relative
-			top: -15px
-	.ellipse-container
-		position: relative
-		margin: 0 auto
-		width: 50rem
-		height: 50rem
-		top: 22rem
-		.ellipse
-			border-radius: 50%
-			position: absolute
-			top: 0
-			border-style: solid
-		.thin
-			width: 75%
-			height: 75%
-			border-width: 2px
-			border-color: #fff transparent
-			top: 6rem
-			left: 12%
-			transform: rotate(0)
-			animation: ellipseRotate2 10s ease-in-out infinite
-		.thick
-			width: 99.5%
-			height: 99.5%
-			border-color: #22c2fd transparent
-			border-width: 3px 
-			top: -0.3rem
-			transform: rotate(-45deg)
-			animation: ellipseRotate 8s ease infinite
-
-	.social-icons
-		position: absolute
-		right: 5%
-		top: 2%
-		li
+	background: #202020 
+	background-image: url(/img/bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	.top-header
+		padding-top: 25px
+		.left-menu
 			float: left
-			list-style: none
-			font-size: 20px
-			margin-right: 20px
-			a
-				color: #bcbcbd
-				&:hover
+			
+
+			.open-line
+				cursor: pointer
+				padding: 10px
+				margin: 50px 0 0 50px
+				z-index: 1
+				position: relative
+				.line
+					width: 30px
+					height: 3px
+					background: #8e8e8e
+					display: block
+					z-index: 1
+					position: relative
+					&:after
+						content: ''
+						width: 30px
+						height: 3px
+						background: #8e8e8e
+						display: block
+						position: absolute
+						top: 10px
+						left: 5px
+					
+			nav
+				left: -50%
+				position: absolute
+				height: 100vh
+				background: #fff
+				top: 0
+				width: 130px
+				transition: all 0.5s
+				ul
+					position: absolute
+
+					li
+						transform-origin: left top
+						transform: rotate(-90deg) translateX(-100%)
+						display: block
+						width: 100%
+						margin: 150px 0
+						font-size: 24px
+						
+						a
+							color: #202020
+				
+		.right-menu
+			float: right
+			ul
+				list-style: none
+				margin-right: 200px
+				li
+					float: left
+					margin: 10px
+					position: relative
+					z-index: 100
+					overflow: hidden
+					&:before
+						content: ''
+						background-color: $accent
+						z-index: -1
+						position: absolute	
+						height: 10px
+						width: 100%
+						top: 6px
+						left: -100%
+						transition: all 0.3s
+						
+					&:hover
+						&::before
+							left: 0
+						a
+							color: #fff
+					a
+						color: #ababab
+						transition: all 0.3s
+						&:hover
+							text-decoration: none 
+	.mid-header
+		padding-top: 15%
+		padding-left: 20%
+		
+		.circle
+			width: 300px
+			height: 300px
+			position: absolute
+			background: #1b1b1b
+			border-radius: 50%
+			right: 25%
+			top: 20%
+			z-index: 1
+			
+		h1
+			font-size: 62px
+			line-height: 65px
+			letter-spacing: 2px
+			z-index: 2
+			position: relative
+			span
+				color: $accent
+		h2
+			font-size: 	62px 
+			z-index: 2
+			position: relative	
+		.soc-mobile
+			display: none
+			ul
+				z-index: 222
+				margin-top: 60px
+				li
+					float: left
+					margin-left: 25px
+					list-style: none
+				a
 					color: #fff
+	.bottom-header
+		cursor: pointer
+		display: inline-block
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+		position: absolute	
+		bottom: 0%
+		color: #aeaeae
+		transition: all 1s
+		&:hover
+			bottom: -4%
+		svg
+			width: 60px
+			height: auto
+			display: block
+			margin: 0 auto
+			fill: #a3a3a3
+			&:nth-child(2)
+				width: 40px
+		.svg-images
+			margin: 40px auto 0 auto
+			
 
 
-@keyframes ellipseRotate
-	0%
-		transform: rotate(-45deg)
-	100%
-		transform: rotate(-765deg)
-
-@keyframes ellipseRotate2
-	0%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(-900deg)
-@import "media" // Всегда в конце
+.portfolio
+		
+	padding-top: 5%
+	padding-bottom: 100px
+	background: #efefef 
+	.job
+		position: relative
+		margin-top: 50px
+		transition: all 1s
+		perspective: 1000px
+		cursor: pointer
+		&:hover
+			transform: perspective(2000px) rotateY(20deg)
+		.image-portfolio
+			height: 470px
+			margin-left: 20%
+			img
+				max-width: 100%
+				max-height: 100%
+		.content-portfolio
+			position: absolute
+			width: 40%
+			height: 350px
+			background-color: rgba(#000, .75)
+			top: 10%
+			left: 40%
+			h2
+				font-family: "Inconsolata"
+				font-size: 42px
+				padding-top: 5%
+				margin-left: 40px 
+				letter-spacing: 2px
+			p
+				padding: 10px 100px 30px 100px
+				color: #afafaf
+			a
+				margin-left: 100px
+				padding-bottom: 5px
+				color: $accent
+				
+				border-bottom: 2px solid #fff
+	.second
+		.image-portfolio
+			margin-left: 56.5%
+			
+		.content-portfolio
+			left: 20%
+		h2,p
+			text-align: right 
+		h2
+			margin-right: 20px
+		a
+			float: right
+			margin-right: 100px
+			
+footer
+	height: 500px
+	background: #000
+	text-align: center
+	
+	h3
+		font-size: 40px 
+		padding-top: 60px
+		display: inline-block
+		border-bottom: 3px solid $accent 
+	h2
+		font-size: 80px
+		margin-top: 80px 
+@import "media" // Always at the end
