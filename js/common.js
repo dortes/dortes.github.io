@@ -79,4 +79,14 @@ var $1 = document.querySelector.bind(document);
      };
 
 followMouse();
+
+ $('#portfolio').addClass('hidden').viewportChecker({
+   classToAdd: 'visible animated fadeInUp',
+   offset: 100
+  });
+
+  $('footer').addClass('hidden').viewportChecker({
+   classToAdd: 'visible animated fadeIn',
+   offset: 100
+  });
 });
