@@ -1,5 +1,7 @@
 $(function() {
-
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
 	$('.open-line').on('click', function(){
 		$('.soc-icons').toggleClass('active-soc')
 	})
