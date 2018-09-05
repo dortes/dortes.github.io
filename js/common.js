@@ -3,6 +3,7 @@ $(function() {
 
 $(window).on("load", function(){
   $('.loading').css("display", "none");
+  $('body').css("opacity", '1')
 })
 	$('.open-line').on('click', function(){
 		$('.soc-icons').toggleClass('active-soc')
