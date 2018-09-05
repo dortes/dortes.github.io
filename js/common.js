@@ -1,7 +1,9 @@
 $(function() {
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
+
+
+$(window).on("load", function(){
+  $('.loading').css("display", "none");
+})
 	$('.open-line').on('click', function(){
 		$('.soc-icons').toggleClass('active-soc')
 	})
