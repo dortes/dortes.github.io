@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Anna Savkina - Violin</title>
+	<title>Anna Savkina - Repertoire</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,19 +18,20 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="#eb6a6a">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
 
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
-<body id="repertoire">
+<body>
 
+<div class="background repertoire-bg"></div>
 	
 		<header>	
 				<div class="logo">	
@@ -38,21 +39,48 @@
 				</div>
 				<nav>
 					<ul>            
-						<li ><a href="/">About</a></li>
+						<li><a href="/">About</a></li>
 						<li><a href="./press.html">Press</a></li>
 						<li><a href="./gallery.html">Gallery</a></li>
 						<li><a href="./video.html">Video</a></li>
 						<li><a href="./schedule.html">Schedule</a></li>
-						<li class="active"><a href="./repertoire.html">Repertoire</a></li>
+						<li  class="active"><a href="./repertoire.html">Repertoire</a></li>
 						<li><a href="./contact.html">Contact</a></li>
 					</ul>
 				</nav>
 
-			
+					<div class="mobile-bar">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>
+
+				<div class="overlay">
+					<span class="close-button">&times;</span>
+					<div class="mobile-menu">
+						<a href="./" >About</a>
+						<a href="./press.html">Press</a>
+						<a href="./gallery.html">Gallery</a>
+						<a href="./video.html">Video</a>
+						<a href="./schedule.html">Schedule</a>
+						<a href="./repertoire.html" class="active">Repertoire</a>
+						<a href="./contact.html">Contact</a>
+					</div>
+					
+					<div class="soc-mob">
+						<a href="https://www.facebook.com/violinistannasavkina"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.youtube.com/user/savnatalia"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.instagram.com/annasavkinaofficial/"><i class="fab fa-instagram"></i></a>
+						<a href="https://plus.google.com/u/0/+AnnaSavkinaViolin"><i class="fab fa-google-plus-g"></i></a>
+						<a href="https://twitter.com/vioannasavkina"><i class="fab fa-twitter"></i></a>
+						<a href="http://muzkarta.info/solist/anna-savkina" class="clef-h"><span class="clef"></a>
+					</div>		
+				</div>	
+
 		</header>
 
 		<section class="main">
-			<div class="repertoire">
+			<article class="repertoire">
 				<div class="title">	
 						<h1>Repertoire</h1>
 				</div>
@@ -259,7 +287,7 @@
 				</div>	                            
 
 	
-			</div>
+			</article>
 				
 	
 		
@@ -280,7 +308,7 @@
 			<nav class="footer-menu">
 				<ul>
 					<li><a href="./imprint.html">Imprint</a></li>
-					<li><a href="./privacy-policy">Privacy Policy</a></li>
+					<li><a href="./privacy-policy.html">Privacy Policy</a></li>
 				</ul>
 			</nav>
 
