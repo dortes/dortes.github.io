@@ -23,4 +23,8 @@ $(function() {
 		e.preventDefault();
 		$(this).siblings('.hidden-menu-mob').toggle();
 	})
+
+	$('.account').on('click', function(){
+		$('.login-form').toggle();
+	})
 });
