@@ -19,12 +19,17 @@ $(function() {
 			$('.overlay').css("width", '0');
 		})
 
-	$('.header-menu-mob li span').on('click', function(e) {
+	$('.header-menu-mob li p').on('click', function(e) {
 		e.preventDefault();
-		$(this).siblings('.hidden-menu-mob').toggle();
+		$(this).siblings('.hidden-menu-mob').toggleClass('visible-menu');
 	})
 
-	$('.account').on('click', function(){
+	$('.fa-user').on('click', function(){
 		$('.login-form').toggle();
+	})
+
+	$('.fa-search').on('click', function() {
+		console.log('s')
+		$('.form-search').toggleClass('addOpacity');
 	})
 });
